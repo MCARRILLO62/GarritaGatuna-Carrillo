@@ -1,8 +1,9 @@
-import logo from './Logo-mini.png'
+import logo from '../../img/Logo-mini.png'
 import Navbar from "react-bootstrap/Navbar"
 import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import NavDropdown from "react-bootstrap/NavDropdown"
+import CartWidget from '../CartWidget/CartWidget'
 
 import './NavBar.css'
 
@@ -25,6 +26,7 @@ const NavBar = () => {
       <Nav.Link href="/#">Ofertas</Nav.Link>
       <Nav.Link href="/#">Contacto</Nav.Link>
     </Nav>
+    <CartWidget />
     </Container>
   </Navbar>
 </>
