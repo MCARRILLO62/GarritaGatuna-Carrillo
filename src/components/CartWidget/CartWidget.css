@@ -1,0 +1,7 @@
+.link-style{
+    color: black;
+}
+
+.link-style:hover{
+    color:rgb(71, 71, 71)
+}
