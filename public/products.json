@@ -2,73 +2,97 @@
   {
     "id": "1",
     "name": "1st Choice Esterilizado",
-    "image": "./assets/1SR-CHOICE-ESTERILIZADO.jpg",
-    "price": "115"
+    "image": "/assets/1SR-CHOICE-ESTERILIZADO.jpg",
+    "marca": "1st-choice",
+    "price": "115",
+    "text": "Fórmula esterilizada 1st Choice está diseñada para gatos castrados. Dado que utilizan entre un 20 y un 30% menos de energía que los gatos no castrados, esta fórmula se puede alimentar a su gato en todo momento. Contiene un alto nivel de proteína que ayudará a limitar el aumento de peso mientras mantiene una masa muscular saludable."
   },
   {
     "id": "2",
     "name": "1st Choice Adult",
-    "image": "./assets/1ST-CHOICE-ADULT-INDOOR.jpg",
-    "price": "140"
+    "image": "/assets/1ST-CHOICE-ADULT-INDOOR.jpg",
+    "marca": "1st-choice",
+    "price": "140",
+    "text": "Nuestra fórmula de Vitalidad para interiores de 1st Choice es la elección perfecta para su amigo felino mimado en interiores. Nuestros ingredientes cuidadosamente seleccionados están diseñados específicamente para gatos que disfrutan de nuestro estilo de vida moderno."
   },
   {
     "id": "3",
     "name": "1st Choice Hipoalergénico",
-    "image": "./assets/1ST-CHOICE-HIPO.jpg",
-    "price": "145"
+    "image": "/assets/1ST-CHOICE-HIPO.jpg",
+    "marca": "1st-choice",
+    "price": "145",
+    "text": "¿Tu gato se rasca constantemente? ¡Podría tener intolerancia alimentaria o alergias! Afortunadamente, hemos desarrollado una alternativa sin granos y utilizamos fuentes protéicas poco convencionales, nuestra fórmula 1st Choice HIPOALERGÉNICA  mantiene saludables las necesidades nutricionales especiales de los gatos."
   },
   {
     "id": "4",
     "name": "Bravery Adulto Salmón",
-    "image": "./assets/BRAVERY-ADULT-SALMON.jpg",
-    "price": "250"
+    "image": "/assets/BRAVERY-ADULT-SALMON.jpg",
+    "marca": "bravery",
+    "price": "250",
+    "text": "Bravery Salmon Adult Cat Sterilized es un alimento para gatos adultos esterilizados. Libres de grano y cereales, los alimentos Bravery son mono proteicos, con carne siempre como primer ingrediente y enriquecidos con antioxidantes, hipo alergénicos y 100% naturales. Receta con salmón, de alto valor biológico cuyo aceite es rico en ácidos grasos ω-3, especialmente EPA y DHA."
   },
   {
     "id": "5",
     "name": "Brit-Care Senior Weight Control",
-    "image": "./assets/BRIT-SENIOR.png",
-    "price": "140"
+    "image": "/assets/BRIT-SENIOR.png",
+    "marca": "brit-care",
+    "price": "140",
+    "text": "La receta hipoalergénica y sin células contiene proteínas de carne de alta calidad, que proporcionan vitaminas y minerales vitales, así como la energía necesaria para un estilo de vida activo. En combinación con la taurina, favorecen la buena vista y un corazón sano."
   },
   {
     "id": "6",
     "name": "Brit-Care Urinary Health",
-    "image": "./assets/BRIT-STERILIZED-URINARY-HEALTH.jpg",
-    "price": "155"
+    "image": "/assets/BRIT-STERILIZED-URINARY-HEALTH.jpg",
+    "marca": "brit-care",
+    "price": "155",
+    "text": "Es un alimento hipoalergénico que influye positivamente en la salud de los riñones y el tracto urinario. Contiene frutas y hierbas ricas en antioxidantes naturales y vitamina E, que protegen el cuerpo de la mascota contra los radicales libres y fortalecen su sistema inmunológico."
   },
   {
     "id": "7",
     "name": "Hill's Perfect Digestion",
-    "image": "./assets/Hills-Perfect-Digestion.png",
-    "price": "180"
+    "image": "/assets/Hills-Perfect-Digestion.png",
+    "marca": "hills",
+    "price": "180",
+    "text": "La salud digestiva de su gato se puede ver afectada negativamente por muchas cosas y cuando su gato tiene problemas digestivos, es una experiencia desagradable pata todos los involucrados. La buena noticia es que puede ayudar a su gato a sentirse mejor con un alimento que está formulado para proporcionarle los cuidados digestivos que necesita."
   },
   {
     "id": "8",
     "name": "Nutram Ideal Solution Support",
-    "image": "./assets/i17-nutram.jpg",
-    "price": "120"
+    "image": "/assets/i17-nutram.jpg",
+    "marca": "nutram",
+    "price": "120",
+    "text": "Nutram I17, es una receta pensada para darle a tu mascota un conjunto de beneficios nutricionales que le permitan llevar una vida saludable. Contiene proteína animal como primer ingrediente que proporciona los aminoacidos esenciales para su organismo, la combinación de aceite de salmón y linaza contribuyen a una piel sana y un pelaje brillante además, los arándanos y semillas de apio ayudan a mantener una vejiga saludable."
   },
   {
     "id": "9",
     "name": "Purina Pro Plan Adult+",
-    "image": "./assets/Pro-Plan-Cat-Adult-7-3kg.png",
-    "price": "95"
+    "image": "/assets/Pro-Plan-Cat-Adult-7-3kg.png",
+    "marca": "purina",
+    "price": "95",
+    "text": "Es una tecnología exclusiva, formulada con una novedosa mezcla de aminoácidos, antioxidantes naturales, vitaminas del complejo B y omega 3 y 6, para ayudar a proteger y mantener la actividad cerebral y retrasar los signos del envejecimiento de tu gato."
   },
   {
     "id": "10",
     "name": "Purina Pro Plan Adult",
-    "image": "./assets/Pro-Plan-Cat-Adult-pollo--766x1024.png",
-    "price": "85"
+    "image": "/assets/Pro-Plan-Cat-Adult-pollo--766x1024.png",
+    "marca": "purina",
+    "price": "85",
+    "text": "Es una tecnología exclusiva, con una combinación de prebióticos y antioxidantes naturales, que ayudan a optimizar la digestión y a mantener fuertes las defensas naturales de tu gato, protegiendo su sistema inmunológico contra las amenazas externas."
   },
   {
     "id": "11",
     "name": "Purina Pro Plan Kitten",
-    "image": "./assets/Pro-Plan-Cat-Kitten--761x1024.png",
-    "price": "125"
+    "image": "/assets/Pro-Plan-Cat-Kitten--761x1024.png",
+    "marca": "purina",
+    "price": "125",
+    "text": "Formulado con una mezcla innovadora de nutrientes, como el calostro rico en anticuerpos naturales. Esta mezcla única ayuda a extender la protección que empezó con la leche materna, reforzando la salud intestinal del gatito y ayudando a reducir el riesgo de trastornos digestivos."
   },
   {
     "id": "12",
     "name": "Nutram Balanced Wellness",
-    "image": "./assets/S5-NUTRAM.jpg",
-    "price": "145"
+    "image": "/assets/S5-NUTRAM.jpg",
+    "marca": "nutram",
+    "price": "145",
+    "text": "Nutram S5, es una receta pensada para darle a tu mascota un conjunto de beneficios nutricionales que le permitan llevar una vida saludable. Contiene proteína animal como primer ingrediente que proporciona los aminoacidos esenciales para su organismo, la combinación de aceite de salmón y linaza contribuyen a una piel sana y un pelaje brillante además, los arándanos y semillas de apio ayudan a mantener una vejiga saludable."
   }
 ]

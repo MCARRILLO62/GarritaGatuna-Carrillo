@@ -1,18 +1,21 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
-  const { name, image, price } = item;
+  const { name, image, price, id } = item;
 
   return (
     <div className="p-3">
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={image} />
+        <Card.Img style={{ maxHeight: "286px" }} variant="top" src={image} />
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
+          <Card.Title style={{ fontSize: "0.9em" }}>{name}</Card.Title>
           <Card.Text>S/ {price}</Card.Text>
-          <Button variant="success">Ver más</Button>
+          <Link to={`/detalle/${id}`}>
+            <Button variant="success">Detalle del producto</Button>
+          </Link>
         </Card.Body>
       </Card>
     </div>
