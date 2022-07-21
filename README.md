@@ -12,7 +12,7 @@ Actualmente, por practicidad, el proyecto se limita a mostrar un catálogo de di
 
 ## GIF del funcionamiento
 
-![GIF](https://i.postimg.cc/90yr39Gs/screen-capture.gif)
+![GIF](https://i.ibb.co/pzGDNZ5/screen-capture-1-1.gif)
 
 
 ## Librerías utilizadas:
