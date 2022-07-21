@@ -1,6 +1,4 @@
-
 ![Logo](https://i.postimg.cc/zBhbqTJq/Logo-1x.png)
-
 
 # Primera entrega e-commerce: Garrita gatuna
 
@@ -8,12 +6,9 @@ Garrita Gatuna es una tienda virtual de artículos para gatos. El proyecto se es
 
 Actualmente, por practicidad, el proyecto se limita a mostrar un catálogo de diferentes marcas conocidas de alimentos para gatos.
 
-
-
 ## GIF del funcionamiento
 
-![GIF](https://i.ibb.co/pzGDNZ5/screen-capture-1-1.gif)
-
+![GIF](https://gcdnb.pbrd.co/images/mt6EZbwJSVwT.gif)
 
 ## Librerías utilizadas:
 
