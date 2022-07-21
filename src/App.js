@@ -20,15 +20,15 @@ function App() {
         <header>
           <NavBar />
         </header>
-        <body>
+        <main>
           <Routes>
             <Route index path="/" element={<ItemListContainer />} />
             <Route
-              path="/categoria/:categoriaId"
+              path="/category/:categoriaId"
               element={<ItemListContainer />}
             />
             <Route
-              path="/detalle/:productId"
+              path="/item/:productId"
               element={
                 <Suspense
                   fallback={
@@ -51,7 +51,7 @@ function App() {
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </body>
+        </main>
       </div>
     </BrowserRouter>
   );

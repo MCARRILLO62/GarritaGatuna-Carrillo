@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+.cart-icon {
+  color: #74cace;
+}
+.cart-icon:hover {
+  color: #65afb3;
+}
+.spinner-color {
+  color: #74cace;
+}
+
+.button-detail {
+  color: white !important;
+  background-color: #74cace !important;
+  border-color: #74cace !important;
+}
+
+.button-detail:hover {
+  background-color: #65afb3 !important;
+  border-color: #65afb3 !important;
+}
+
+.stock-count {
+  background-color: #74cace;
+  border-radius: 8px;
+  padding: 0.5rem;
+}

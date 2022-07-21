@@ -28,23 +28,24 @@ const ItemCount = ({ initial, stock, onAdd }) => {
   };
 
   return (
-    <div className="container d-flex flex-column bg-light cont-producto">
-      <h3 className="fs-6 my-3 align-self-start">Producto</h3>
-      <div className="d-flex bg-white border border-secondary rounded mb-3">
-        <button className="border-0 bg-transparent ms-1" onClick={resta}>
+    <div className="container-flex d-flex cont-producto mt-3 p-0">
+      <div className="d-flex bg-white border border-secondary rounded mb-3 col-4 me-3">
+        <button className="border-0 bg-transparent" onClick={resta}>
           -
         </button>
-        <h6 className="w-100 mt-1 align-self-center">{count}</h6>
-        <button className="border-0 bg-transparent mx-1" onClick={suma}>
+        <h6 className="w-100 mt-1 align-self-center px-1">{count}</h6>
+        <button className="border-0 bg-transparent" onClick={suma}>
           +
         </button>
       </div>
-      <button
-        className="btn btn-outline-primary rounded fs-6 mb-2"
-        onClick={() => validateStock(stock)}
-      >
-        Agregar al carrito
-      </button>
+      <div className="align-self-center col-10">
+        <button
+          className="btn button-detail rounded fs-6 mb-3 fw-bold"
+          onClick={() => validateStock(stock)}
+        >
+          Agregar al carrito
+        </button>
+      </div>
     </div>
   );
 };

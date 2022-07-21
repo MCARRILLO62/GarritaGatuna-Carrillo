@@ -8,13 +8,16 @@ const Item = ({ item }) => {
 
   return (
     <div className="p-3">
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem", borderRadius: "5px" }}>
         <Card.Img style={{ maxHeight: "286px" }} variant="top" src={image} />
         <Card.Body>
           <Card.Title style={{ fontSize: "0.9em" }}>{name}</Card.Title>
-          <Card.Text>S/ {price}</Card.Text>
-          <Link to={`/detalle/${id}`}>
-            <Button variant="success">Detalle del producto</Button>
+          <Card.Text>
+            <small>Precio: </small>S/ {price}
+            <small>.00</small>
+          </Card.Text>
+          <Link to={`/item/${id}`}>
+            <Button className="button-detail">Detalle del producto</Button>
           </Link>
         </Card.Body>
       </Card>

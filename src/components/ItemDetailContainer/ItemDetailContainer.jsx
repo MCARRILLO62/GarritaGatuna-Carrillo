@@ -34,8 +34,8 @@ const ItemDetailContainer = () => {
     <div>
       {loading ? (
         <div className="container mt-5">
-          <div className="spinner-border text-success" role="status"></div>
-          <div className="sr-only text-success mt-2">Cargando...</div>
+          <div className="spinner-border spinner-color" role="status"></div>
+          <div className="sr-only spinner-color mt-2">Cargando...</div>
         </div>
       ) : (
         <ItemDetail product={product} />

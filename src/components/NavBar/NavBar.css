@@ -3,4 +3,8 @@
 }
 .nav-link {
   color: black !important;
+  border-radius: 8px;
+}
+.nav-link:hover {
+  background-color: rgba(101, 175, 179, 0.7);
 }
