@@ -20,7 +20,6 @@ const ItemListContainer = () => {
             data.filter((product) => product.marca === categoriaId)
           )
           .then((data) => setItems(data))
-          .catch(console.log("error"))
           .finally(() => setLoading(false));
       }, 2000);
     } else {
@@ -29,7 +28,6 @@ const ItemListContainer = () => {
         fetch("/products.json")
           .then((res) => res.json())
           .then((data) => setItems(data))
-          .catch(console.log("error"))
           .finally(() => setLoading(false));
       }, 2000);
     }

@@ -14,11 +14,7 @@ const ItemDetailContainer = () => {
   const getItem = () => {
     return new Promise((res, rej) => {
       setTimeout(() => {
-        res(
-          fetch("/products.json")
-            .then((res) => res.json())
-            .catch(console.log("error"))
-        );
+        res(fetch("/products.json").then((res) => res.json()));
       }, 2000);
     });
   };

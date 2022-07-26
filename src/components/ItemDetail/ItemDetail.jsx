@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ product }) => {
   const { name, image, price, stock, text } = product;
 
+  const [buttonState, setButtonState] = useState("add");
+
   const onAdd = (count) => {
     console.log(`${count} unidades añadidas al carrito.`);
+    setButtonState("goCart");
   };
 
   return (
@@ -31,7 +35,22 @@ const ItemDetail = ({ product }) => {
               </p>
             </div>
             <p className="align-self-start text-start mt-4">{text}</p>
-            <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+            {buttonState === "add" ? (
+              <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+            ) : (
+              <div className="container-flex cont-cart mt-3 p-0 row">
+                <Link className="col-6 pe-0" to="/cart">
+                  <button className="btn button-detail rounded fs-6 mb-3 fw-bold">
+                    Terminar mi compra
+                  </button>
+                </Link>
+                <Link className="col-6 px-0" to="/">
+                  <button className="btn button-detail rounded fs-6 mb-3 fw-bold">
+                    Seguir comprando
+                  </button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
