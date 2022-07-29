@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { useCartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ product }) => {
@@ -8,10 +9,15 @@ const ItemDetail = ({ product }) => {
 
   const [buttonState, setButtonState] = useState("add");
 
+  const { addItem, cartList } = useCartContext();
+
   const onAdd = (count) => {
     console.log(`${count} unidades añadidas al carrito.`);
     setButtonState("goCart");
+    addItem(product, count);
   };
+
+  console.log(cartList);
 
   return (
     <div className="aos-init" data-aos="zoom-out">
