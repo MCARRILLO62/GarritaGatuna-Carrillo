@@ -11,14 +11,13 @@ const CartContext = createContext([]);
 export const useCartContext = () => useContext(CartContext);
 
 const CartContextProvider = ({ children }) => {
-  const [cartList, SetCartList] = useState([]);
+  const [cartList, SetCartList] = useState(
+    JSON.parse(localStorage.getItem("cartItems")) || []
+  );
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("cartItems"));
-    if (items) {
-      SetCartList(items);
-    }
-  }, []);
+    localStorage.setItem("cartItems", JSON.stringify(cartList));
+  }, [cartList]);
 
   const addItem = (item, quantity) => {
     if (isInCart(item.id, cartList)) {
@@ -32,11 +31,9 @@ const CartContextProvider = ({ children }) => {
         cartList[itemIndex].quantity = quantity + cartList[itemIndex].quantity;
         console.log(quantity + " unidades agregadas al item existente.");
         SetCartList(cartList);
-        localStorage.setItem("cartItems", JSON.stringify(cartList));
       }
     } else {
       SetCartList([...cartList, { ...item, quantity: quantity }]);
-      localStorage.setItem("cartItems", JSON.stringify(cartList));
     }
   };
 
@@ -48,8 +45,25 @@ const CartContextProvider = ({ children }) => {
     }
   };
 
+  const emptyCart = () => {
+    SetCartList([]);
+  };
+
+  const removeCartItem = (itemId) => {
+    SetCartList(cartList.filter((product) => product.id != itemId));
+  };
+
+  const cartTotal = () => {
+    const priceTotal = cartList.map(
+      (product) => product.price * product.quantity
+    );
+    return priceTotal.reduce((x, y) => x + y);
+  };
+
   return (
-    <CartContext.Provider value={{ cartList, addItem }}>
+    <CartContext.Provider
+      value={{ cartList, addItem, emptyCart, cartTotal, removeCartItem }}
+    >
       {children}
     </CartContext.Provider>
   );
