@@ -1,41 +1,54 @@
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
-  const { categoriaId } = useParams();
+  const { categoryId } = useParams();
 
   const [items, setItems] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (categoriaId) {
+    if (categoryId) {
       setLoading(true);
-      setTimeout(() => {
-        fetch("/products.json")
-          .then((res) => res.json())
-          .then((data) =>
-            data.filter((product) => product.marca === categoriaId)
+      const db = getFirestore();
+      const queryCollection = collection(db, "items");
+      const queryCollectionFiltered = query(
+        queryCollection,
+        where("marca", "==", categoryId)
+      );
+      getDocs(queryCollectionFiltered)
+        .then((resp) =>
+          setItems(
+            resp.docs.map((product) => ({ id: product.id, ...product.data() }))
           )
-          .then((data) => setItems(data))
-          .finally(() => setLoading(false));
-      }, 2000);
+        )
+        .finally(() => setLoading(false));
     } else {
       setLoading(true);
-      setTimeout(() => {
-        fetch("/products.json")
-          .then((res) => res.json())
-          .then((data) => setItems(data))
-          .finally(() => setLoading(false));
-      }, 2000);
+      const db = getFirestore();
+      const queryCollection = collection(db, "items");
+      getDocs(queryCollection)
+        .then((resp) =>
+          setItems(
+            resp.docs.map((product) => ({ id: product.id, ...product.data() }))
+          )
+        )
+        .finally(() => setLoading(false));
     }
-  }, [categoriaId]);
+  }, [categoryId]);
 
   return (
     <div className="container mt-5 fs-5">
-      {/* <ItemCount stock={5} initial={1} onAdd={onAdd} /> */}
       {loading ? (
         <div className="container mt-5 ">
           <div className="spinner-border spinner-color" role="status"></div>

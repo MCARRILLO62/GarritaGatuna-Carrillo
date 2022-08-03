@@ -3,6 +3,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const { productId } = useParams();
@@ -11,20 +12,13 @@ const ItemDetailContainer = () => {
 
   const [loading, setLoading] = useState(true);
 
-  const getItem = () => {
-    return new Promise((res, rej) => {
-      setTimeout(() => {
-        res(fetch("/products.json").then((res) => res.json()));
-      }, 2000);
-    });
-  };
-
   useEffect(() => {
-    getItem()
-      .then((res) => res.find((item) => item.id === productId))
-      .then((data) => setProduct(data))
+    const db = getFirestore();
+    const queryProduct = doc(db, "items", productId);
+    getDoc(queryProduct)
+      .then((resp) => setProduct({ id: resp.id, ...resp.data() }))
       .finally(() => setLoading(false));
-  }, []);
+  }, [productId]);
 
   return (
     <div>

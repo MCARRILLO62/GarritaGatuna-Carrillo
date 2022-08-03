@@ -26,7 +26,7 @@ function App() {
             <Routes>
               <Route index path="/" element={<ItemListContainer />} />
               <Route
-                path="/category/:categoriaId"
+                path="/category/:categoryId"
                 element={<ItemListContainer />}
               />
               <Route
