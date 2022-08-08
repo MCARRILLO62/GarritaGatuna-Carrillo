@@ -1,10 +1,6 @@
-import {
-  Children,
-  createContext,
-  useState,
-  useContext,
-  useEffect,
-} from "react";
+import { createContext, useState, useContext, useEffect } from "react";
+
+import Toast from "../helpers/Toast";
 
 const CartContext = createContext([]);
 
@@ -21,19 +17,19 @@ const CartContextProvider = ({ children }) => {
 
   const addItem = (item, quantity) => {
     if (isInCart(item.id, cartList)) {
-      console.log("El item ya está en el carrito");
       const itemIndex = cartList.indexOf(
-        cartList.find((object) => object.id == item.id)
+        cartList.find((object) => object.id === item.id)
       );
       if (cartList[itemIndex].quantity + quantity > item.stock) {
-        console.log("Stock superado. No se añadieron nuevas unidades");
+        Toast("Stock superado. No se añadieron nuevas unidades");
       } else {
         cartList[itemIndex].quantity = quantity + cartList[itemIndex].quantity;
-        console.log(quantity + " unidades agregadas al item existente.");
+        Toast(`${quantity} unidad(es) agregadas al item existente.`);
         SetCartList(cartList);
       }
     } else {
       SetCartList([...cartList, { ...item, quantity: quantity }]);
+      Toast(`${quantity} unidad(es) añadidas al carrito.`);
     }
   };
 
@@ -50,7 +46,7 @@ const CartContextProvider = ({ children }) => {
   };
 
   const removeCartItem = (itemId) => {
-    SetCartList(cartList.filter((product) => product.id != itemId));
+    SetCartList(cartList.filter((product) => product.id !== itemId));
   };
 
   const cartTotal = () => {

@@ -32,6 +32,7 @@ const ItemListContainer = () => {
             resp.docs.map((product) => ({ id: product.id, ...product.data() }))
           )
         )
+        .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     } else {
       setLoading(true);
@@ -43,6 +44,7 @@ const ItemListContainer = () => {
             resp.docs.map((product) => ({ id: product.id, ...product.data() }))
           )
         )
+        .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
   }, [categoryId]);

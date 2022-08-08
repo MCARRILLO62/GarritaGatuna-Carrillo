@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Toast from "../../helpers/Toast";
 
 import "./ItemCount.css";
 
@@ -15,7 +16,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     if (count < stock) {
       setCount(count + 1);
     } else {
-      alert(`Unidades máximas en stock: ${stock}.`);
+      Toast(`Unidades máximas en stock: ${stock}.`);
     }
   };
 
@@ -23,7 +24,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     if (count > initial) {
       setCount(count - 1);
     } else {
-      alert(`Por favor, seleccionar ${initial} unidad(es) o más.`);
+      Toast(`Por favor, seleccionar ${initial} unidad(es) o más.`);
     }
   };
 
