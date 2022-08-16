@@ -12,10 +12,9 @@ Actualmente, por practicidad, el proyecto se limita a mostrar un catálogo de di
 
 - Los datos enviados mediante el formulario son recopilados en una base de datos; por favor considerar evitar incluir información sensible o de contacto.
 
-
 ## GIF del funcionamiento
 
-![GIF](https://s4.gifyu.com/images/screen-capture-3.gif)
+![GIF](https://gcdnb.pbrd.co/images/GR0fsVdweN3o.gif)
 
 ## Demo
 
@@ -24,8 +23,8 @@ https://garrita-gatuna.netlify.app/
 ## Librerías utilizadas:
 
 - [React v.18.2.0](https://reactjs.org/): Librería principal del proyecto.
-- [Bootstrap v.5.1.3](https://getbootstrap.com/): Framework de CSS para estilizado de componentes. 
-- [Bootstrap-icons v.1.8.3](https://icons.getbootstrap.com/): Librería de íconos de Bootstrap. 
+- [Bootstrap v.5.1.3](https://getbootstrap.com/): Framework de CSS para estilizado de componentes.
+- [Bootstrap-icons v.1.8.3](https://icons.getbootstrap.com/): Librería de íconos de Bootstrap.
 - [Firebase v.9.9.1](https://firebase.google.com/): Plataforma de desarrollo usada para el backend del proyecto.
 - [React-Bootstrap v.2.4.0](https://react-bootstrap.github.io/): Librería/framework utilizada para ciertos componentes.
 - [React-Router-Dom v.6.3.0](https://reactrouter.com/): Librería de enrutado para React.
