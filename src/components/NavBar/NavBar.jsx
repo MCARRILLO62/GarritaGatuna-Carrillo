@@ -6,6 +6,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 import "./NavBar.css";
+import CatListing from "../../helpers/CatListing";
 
 const NavBar = () => {
   return (
@@ -17,29 +18,7 @@ const NavBar = () => {
               <img className="logoBrand" src={logo} alt="logo" />
             </Link>
           </Navbar.Brand>
-          <Nav>
-            <Link to="/" className="nav-link">
-              Inicio
-            </Link>
-            <Link to="/category/1st-choice" className="nav-link">
-              1st Choice
-            </Link>
-            <Link to="/category/bravery" className="nav-link">
-              Bravery
-            </Link>
-            <Link to="/category/brit-care" className="nav-link">
-              Brit-Care
-            </Link>
-            <Link to="/category/nutram" className="nav-link">
-              Nutram
-            </Link>
-            <Link to="/category/purina" className="nav-link">
-              Purina
-            </Link>
-            <Link to="/category/hills" className="nav-link">
-              Hill's
-            </Link>
-          </Nav>
+          <Nav>{CatListing()}</Nav>
           <Link to="/cart">
             <CartWidget />
           </Link>

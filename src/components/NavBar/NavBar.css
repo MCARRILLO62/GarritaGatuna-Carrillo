@@ -8,3 +8,7 @@
 .nav-link:hover {
   background-color: rgba(101, 175, 179, 0.7);
 }
+
+.active-link {
+  font-weight: bold;
+}

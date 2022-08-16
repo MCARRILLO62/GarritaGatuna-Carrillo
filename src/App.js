@@ -22,7 +22,7 @@ function App() {
           <header>
             <NavBar />
           </header>
-          <main>
+          <main className="body-wrap">
             <Routes>
               <Route index path="/" element={<ItemListContainer />} />
               <Route
@@ -54,6 +54,12 @@ function App() {
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>
+          <footer>
+            <div className="container-fluid footer-style">
+              &copy; Garrita Gatuna {new Date().getFullYear()} - Todos los
+              derechos reservados
+            </div>
+          </footer>
         </div>
       </CartContextProvider>
     </BrowserRouter>

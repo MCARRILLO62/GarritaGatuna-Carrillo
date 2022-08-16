@@ -18,35 +18,21 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (categoryId) {
-      setLoading(true);
-      const db = getFirestore();
-      const queryCollection = collection(db, "items");
-      const queryCollectionFiltered = query(
-        queryCollection,
-        where("marca", "==", categoryId)
-      );
-      getDocs(queryCollectionFiltered)
-        .then((resp) =>
-          setItems(
-            resp.docs.map((product) => ({ id: product.id, ...product.data() }))
-          )
+    setLoading(true);
+    const db = getFirestore();
+    const queryCollection = collection(db, "items");
+    const queryCollectionSelect = categoryId
+      ? query(queryCollection, where("marca", "==", categoryId))
+      : queryCollection;
+
+    getDocs(queryCollectionSelect)
+      .then((resp) =>
+        setItems(
+          resp.docs.map((product) => ({ id: product.id, ...product.data() }))
         )
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    } else {
-      setLoading(true);
-      const db = getFirestore();
-      const queryCollection = collection(db, "items");
-      getDocs(queryCollection)
-        .then((resp) =>
-          setItems(
-            resp.docs.map((product) => ({ id: product.id, ...product.data() }))
-          )
-        )
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    }
+      )
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
   }, [categoryId]);
 
   return (

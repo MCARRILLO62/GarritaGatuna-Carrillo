@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -36,6 +39,14 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-load {
+  color: #74cace;
+}
+
+.body-wrap {
+  flex-grow: 1;
+}
 .cart-icon {
   color: #74cace;
 }
@@ -65,4 +76,11 @@
 
 .badge-bg {
   background-color: #4e8a8d !important;
+}
+
+.footer-style {
+  background-color: #74cace;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 2rem;
 }

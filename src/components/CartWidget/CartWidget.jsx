@@ -1,4 +1,3 @@
-import React from "react";
 import { useCartContext } from "../../context/CartContext";
 
 import "./CartWidget.css";

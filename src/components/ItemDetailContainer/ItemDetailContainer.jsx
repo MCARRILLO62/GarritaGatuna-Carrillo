@@ -1,4 +1,3 @@
-import React from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 import { useState, useEffect } from "react";

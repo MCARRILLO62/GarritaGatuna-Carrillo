@@ -21,15 +21,15 @@ const CartContextProvider = ({ children }) => {
         cartList.find((object) => object.id === item.id)
       );
       if (cartList[itemIndex].quantity + quantity > item.stock) {
-        Toast("Stock superado. No se añadieron nuevas unidades");
+        Toast("Stock superado. No se añadieron nuevas unidades", 8);
       } else {
         cartList[itemIndex].quantity = quantity + cartList[itemIndex].quantity;
-        Toast(`${quantity} unidad(es) agregadas al item existente.`);
+        Toast(`${quantity} unidad(es) agregadas al item existente.`, 8);
         SetCartList(cartList);
       }
     } else {
       SetCartList([...cartList, { ...item, quantity: quantity }]);
-      Toast(`${quantity} unidad(es) añadidas al carrito.`);
+      Toast(`${quantity} unidad(es) añadidas al carrito.`, 8);
     }
   };
 
